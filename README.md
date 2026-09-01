@@ -35,7 +35,26 @@ Edit `skills/discover-finance-blockchain-jobs/sources.json` or pass a separate s
 
 ## How End Users Run a Skill
 
-Copy this repository, then invoke a skill by name in Codex:
+Install every skill in this repository into your personal Codex skill directory:
+
+```powershell
+python scripts/install_skills.py
+```
+
+Install only selected skills, preview changes, or update an existing installation:
+
+```powershell
+python scripts/install_skills.py match-resume-to-jobs research-company-hiring-signal
+python scripts/install_skills.py --dry-run
+python scripts/install_skills.py --force
+```
+
+The default destination is `$HOME/.agents/skills` (`Path.home()` on Windows). Use
+`--target <directory>` to choose a different destination, or `--list` to show the
+skills available in this repository. Codex normally detects newly installed skills
+automatically; restart Codex if they do not appear.
+
+After installation, invoke a skill by name in Codex:
 
 ```text
 Use $discover-finance-blockchain-jobs to find remote US backend engineering jobs in blockchain infrastructure for a Go and TypeScript engineer with 4 years of experience.
