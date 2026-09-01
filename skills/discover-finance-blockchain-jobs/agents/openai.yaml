@@ -1,0 +1,8 @@
+interface:
+  display_name: "Discover Finance Blockchain Jobs"
+  short_description: "Rank current fintech and blockchain jobs"
+  brand_color: "#2563EB"
+  default_prompt: "Use $discover-finance-blockchain-jobs to find current software engineering roles in fintech, trading, crypto, and blockchain that match my profile."
+policy:
+  allow_implicit_invocation: true
+

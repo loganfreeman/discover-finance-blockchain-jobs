@@ -1,0 +1,8 @@
+interface:
+  display_name: "Research Hiring Signal"
+  short_description: "Company hiring brief for engineers"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $research-company-hiring-signal to research this finance or blockchain company and tell me whether I should apply now."
+policy:
+  allow_implicit_invocation: true
+

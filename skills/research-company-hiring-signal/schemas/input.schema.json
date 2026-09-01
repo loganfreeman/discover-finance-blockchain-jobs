@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ResearchCompanyHiringSignalInput",
+  "type": "object",
+  "properties": {
+    "company": { "type": "string" },
+    "company_url": { "type": "string" },
+    "target_role": { "type": "string" },
+    "seniority": { "type": "string" },
+    "location": { "type": "string" },
+    "user_profile": { "type": "string" },
+    "concerns": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "anyOf": [
+    { "required": ["company"] },
+    { "required": ["company_url"] }
+  ],
+  "additionalProperties": true
+}
+

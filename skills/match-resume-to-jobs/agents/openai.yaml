@@ -1,0 +1,8 @@
+interface:
+  display_name: "Match Resume To Jobs"
+  short_description: "Score resume fit for target roles"
+  brand_color: "#0F766E"
+  default_prompt: "Use $match-resume-to-jobs to compare my resume against these fintech and blockchain engineering jobs and produce a fit report."
+policy:
+  allow_implicit_invocation: true
+

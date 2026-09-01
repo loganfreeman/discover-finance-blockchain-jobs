@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MatchResumeToJobsInput",
+  "type": "object",
+  "properties": {
+    "resume_text": { "type": "string" },
+    "profile_summary": { "type": "string" },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": { "type": "string" },
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["title"]
+      }
+    },
+    "target_roles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "anyOf": [
+    { "required": ["resume_text"] },
+    { "required": ["profile_summary"] }
+  ],
+  "additionalProperties": true
+}
+

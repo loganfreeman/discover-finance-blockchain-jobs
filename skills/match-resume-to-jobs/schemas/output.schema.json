@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MatchResumeToJobsOutput",
+  "type": "object",
+  "properties": {
+    "generated_at": { "type": "string" },
+    "overall_summary": { "type": "string" },
+    "matches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": { "type": "integer" },
+          "company": { "type": "string" },
+          "title": { "type": "string" },
+          "fit_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "strong_evidence": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "gaps": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "tailoring_notes": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["rank", "title", "fit_score"]
+      }
+    },
+    "resume_edits": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["generated_at", "matches"],
+  "additionalProperties": true
+}
+

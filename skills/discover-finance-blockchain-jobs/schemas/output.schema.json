@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DiscoverFinanceBlockchainJobsOutput",
+  "type": "object",
+  "properties": {
+    "generated_at": { "type": "string" },
+    "assumptions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": { "type": "integer" },
+          "company": { "type": "string" },
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "location": { "type": "string" },
+          "industry_category": { "type": "string" },
+          "role_family": { "type": "string" },
+          "match_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "match_rationale": { "type": "string" },
+          "gaps": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "application_priority": { "type": "string" }
+        },
+        "required": ["rank", "company", "title", "url", "match_score"]
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string" },
+          "retrieved_at": { "type": "string" }
+        },
+        "required": ["label", "url"]
+      }
+    }
+  },
+  "required": ["generated_at", "roles"],
+  "additionalProperties": true
+}
+

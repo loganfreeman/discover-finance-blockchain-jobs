@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DiscoverFinanceBlockchainJobsInput",
+  "type": "object",
+  "properties": {
+    "target_roles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "industries": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "location": { "type": "string" },
+    "remote_preference": { "type": "string" },
+    "seniority": { "type": "string" },
+    "years_experience": { "type": "number" },
+    "skills": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "max_results": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50
+    }
+  },
+  "required": ["target_roles"],
+  "additionalProperties": true
+}
+

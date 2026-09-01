@@ -1,0 +1,8 @@
+interface:
+  display_name: "Weekly Market Report"
+  short_description: "Weekly hiring report for target roles"
+  brand_color: "#C2410C"
+  default_prompt: "Use $generate-weekly-market-report to create this week's engineering job market report for fintech, trading, crypto, and blockchain roles."
+policy:
+  allow_implicit_invocation: true
+

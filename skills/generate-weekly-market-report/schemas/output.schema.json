@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GenerateWeeklyMarketReportOutput",
+  "type": "object",
+  "properties": {
+    "generated_at": { "type": "string" },
+    "scope": { "type": "string" },
+    "executive_summary": { "type": "string" },
+    "companies_hiring": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": { "type": "string" },
+          "category": { "type": "string" },
+          "relevant_roles": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "signal": { "type": "string" },
+          "priority": { "type": "string" }
+        },
+        "required": ["company", "category"]
+      }
+    },
+    "skill_trends": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string" },
+          "retrieved_at": { "type": "string" }
+        },
+        "required": ["label", "url"]
+      }
+    }
+  },
+  "required": ["generated_at", "executive_summary"],
+  "additionalProperties": true
+}
+
