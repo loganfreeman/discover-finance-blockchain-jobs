@@ -1,0 +1,12 @@
+{
+  "jobs": [
+    {
+      "title": "Senior Protocol Engineer",
+      "jobUrl": "https://example.test/jobs/ashby-protocol",
+      "location": "North America",
+      "isRemote": true,
+      "descriptionPlain": "Build distributed blockchain systems in Rust and Go.",
+      "publishedAt": "2026-08-29T08:00:00Z"
+    }
+  ]
+}

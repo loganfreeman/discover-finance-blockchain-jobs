@@ -42,9 +42,29 @@
         },
         "required": ["label", "url"]
       }
+    },
+    "source_errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": { "type": "string" },
+          "error": { "type": "string" }
+        },
+        "required": ["company", "error"]
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "sources_attempted": { "type": "integer" },
+        "sources_succeeded": { "type": "integer" },
+        "postings_fetched": { "type": "integer" },
+        "engineering_postings": { "type": "integer" },
+        "roles_returned": { "type": "integer" }
+      }
     }
   },
   "required": ["generated_at", "roles"],
   "additionalProperties": true
 }
-

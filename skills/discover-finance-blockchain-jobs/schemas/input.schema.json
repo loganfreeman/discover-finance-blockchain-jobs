@@ -23,13 +23,34 @@
       "type": "array",
       "items": { "type": "string" }
     },
+    "excluded_keywords": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "excluded_companies": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "min_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "strict_location": {
+      "type": "boolean",
+      "description": "Exclude postings with an explicit location outside the requested region. Defaults to true."
+    },
     "max_results": {
       "type": "integer",
       "minimum": 1,
       "maximum": 50
+    },
+    "max_per_company": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
     }
   },
   "required": ["target_roles"],
   "additionalProperties": true
 }
-

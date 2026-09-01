@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Platform Engineer",
+    "hostedUrl": "https://example.test/jobs/lever-platform",
+    "categories": {"location": "Remote"},
+    "descriptionPlain": "Operate blockchain infrastructure using Kubernetes and Go.",
+    "lists": [{"text": "Requirements", "content": "<p>AWS and Terraform</p>"}],
+    "createdAt": 1788084000000
+  }
+]

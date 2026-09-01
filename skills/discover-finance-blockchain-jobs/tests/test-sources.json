@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "company": "DemoPay",
+      "industry_category": "fintech",
+      "provider": "greenhouse",
+      "token": "demo"
+    },
+    {
+      "company": "DemoChain",
+      "industry_category": "blockchain-infra",
+      "provider": "lever",
+      "token": "demo"
+    },
+    {
+      "company": "DemoProtocol",
+      "industry_category": "blockchain-infra",
+      "provider": "ashby",
+      "token": "demo"
+    }
+  ]
+}

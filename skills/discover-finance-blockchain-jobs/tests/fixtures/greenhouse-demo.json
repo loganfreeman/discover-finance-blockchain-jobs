@@ -1,0 +1,17 @@
+{
+  "jobs": [
+    {
+      "title": "Backend Engineer, Payments",
+      "absolute_url": "https://example.test/jobs/greenhouse-backend",
+      "location": {"name": "Remote - US"},
+      "updated_at": "2026-08-30T10:00:00Z",
+      "content": "<p>Build APIs and distributed systems with Go, Postgres, and AWS.</p>"
+    },
+    {
+      "title": "Account Executive",
+      "absolute_url": "https://example.test/jobs/sales",
+      "location": {"name": "New York"},
+      "content": "Sales role"
+    }
+  ]
+}

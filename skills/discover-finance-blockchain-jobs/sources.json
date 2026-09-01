@@ -1,0 +1,52 @@
+{
+  "sources": [
+    {
+      "company": "Coinbase",
+      "industry_category": "crypto-exchange",
+      "provider": "greenhouse",
+      "token": "coinbase"
+    },
+    {
+      "company": "Robinhood",
+      "industry_category": "trading",
+      "provider": "greenhouse",
+      "token": "robinhood"
+    },
+    {
+      "company": "Polygon Labs",
+      "industry_category": "blockchain-infra",
+      "provider": "ashby",
+      "token": "polygon-labs"
+    },
+    {
+      "company": "Conduit",
+      "industry_category": "blockchain-infra",
+      "provider": "ashby",
+      "token": "conduit"
+    },
+    {
+      "company": "Wormhole Labs",
+      "industry_category": "blockchain-infra",
+      "provider": "ashby",
+      "token": "wormholelabs"
+    },
+    {
+      "company": "TRM Labs",
+      "industry_category": "regtech-risk",
+      "provider": "ashby",
+      "token": "trm-labs"
+    },
+    {
+      "company": "Injective",
+      "industry_category": "defi",
+      "provider": "ashby",
+      "token": "injective"
+    },
+    {
+      "company": "Theodo FinTech",
+      "industry_category": "fintech",
+      "provider": "lever",
+      "token": "theodo"
+    }
+  ]
+}

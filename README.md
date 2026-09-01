@@ -22,6 +22,17 @@ Each skill lives in `skills/<skill-name>/` and includes:
 - `templates/report.md`: report shape for human-readable output.
 - `examples/`: sample input and output.
 
+`discover-finance-blockchain-jobs` also includes an executable, dependency-free collector for public Greenhouse, Lever, and Ashby job boards:
+
+```powershell
+python skills/discover-finance-blockchain-jobs/scripts/discover_jobs.py `
+  --input skills/discover-finance-blockchain-jobs/examples/input.json `
+  --format markdown `
+  --output jobs-report.md
+```
+
+Edit `skills/discover-finance-blockchain-jobs/sources.json` or pass a separate source catalog to search different companies.
+
 ## How End Users Run a Skill
 
 Copy this repository, then invoke a skill by name in Codex:
@@ -60,4 +71,3 @@ Good next additions:
 - `research-compensation`
 - `compare-offers`
 - deterministic helper scripts for normalizing job exports from Lever, Greenhouse, Ashby, CSV, and JSON.
-

@@ -1,0 +1,14 @@
+{
+  "target_roles": ["backend", "platform"],
+  "industries": ["blockchain-infra", "fintech", "crypto-exchange"],
+  "location": "United States",
+  "remote_preference": "remote",
+  "strict_location": true,
+  "seniority": "mid",
+  "years_experience": 4,
+  "skills": ["Go", "TypeScript", "Postgres", "AWS", "distributed systems", "APIs"],
+  "excluded_keywords": ["Solidity"],
+  "max_results": 20,
+  "max_per_company": 4,
+  "min_score": 40
+}

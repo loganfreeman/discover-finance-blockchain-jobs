@@ -9,7 +9,19 @@ metadata:
 
 Use this skill when a user wants current engineering job opportunities in finance, fintech, trading, quant finance, crypto, DeFi, or blockchain infrastructure.
 
-The output should be a concise, source-linked job discovery report with ranked roles and practical application guidance. Job data is time-sensitive: verify current openings at execution time whenever web access is available, and include retrieval dates. If current web access is unavailable, say so clearly and work only from user-provided job data.
+The output should be a concise, source-linked job discovery report with ranked roles and practical application guidance. Use `scripts/discover_jobs.py` for repeatable discovery from configured Greenhouse, Lever, and Ashby job boards. Job data is time-sensitive: execute the script at request time and retain retrieval dates. If network access is unavailable, say so clearly and use user-provided job data or fixtures only.
+
+## Execute Discovery
+
+Convert the user's request into an input JSON document matching `schemas/input.schema.json`, then run:
+
+```bash
+python scripts/discover_jobs.py --input <profile.json> --format markdown --output <report.md>
+```
+
+Use `--format json` for automation. The default source catalog is `sources.json`; pass `--sources <catalog.json>` to use a custom catalog. A catalog entry needs `company`, `industry_category`, `provider`, and the public ATS board `token`.
+
+The script uses public, read-only ATS APIs and requires no credentials. It continues when one source fails and records failures in `source_errors`. Treat its score as triage: inspect the posting before making strong claims, especially for location, work authorization, compensation, and seniority.
 
 ## Inputs To Gather
 
@@ -24,7 +36,7 @@ Use what the user provides and make reasonable assumptions for missing details:
 
 ## Research Guidance
 
-Prefer official company career pages and applicant tracking system pages. Use third-party aggregators only as discovery aids, and confirm important jobs on official pages when possible.
+Prefer the script's official ATS results. Use web search to discover additional company board tokens or roles that are not on a supported ATS, and confirm those roles on an official company page before adding them to the report.
 
 For each role, capture:
 
@@ -62,4 +74,3 @@ Follow `templates/report.md` unless the user asks for a different format. Includ
 - Skill gaps or resume keywords to add.
 - Suggested next actions.
 - Source links with retrieval date.
-
